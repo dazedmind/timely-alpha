@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timely - Regain your focus</title>
+    <link rel="stylesheet" href="/public/timerstyle.css" type="text/css">
+    <link rel="icon" href="/public/img/clock.png" type="img">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<header>
+    <p class="app-name">Timely</p>
+    <nav>
+        <div class="main-menu">
+            <ul id="menu-list">
+                <div class="close-menu" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="pomodoro.html">Manage Apps</a>
+                </li>
+                <li>
+                    <a href="#">Invite Friends</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+            <div class="open-menu" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <div class="main-content">
+            <div class="dashboard">
+                <p class="dashboard-header">Study Hub</p>
+                <div class="users">
+                    <img src="/public/img/blank-profile.png" alt="profile" class="profile-picture" style="height: 3rem; width: 3rem; margin: 1rem 1rem .5rem 0rem; border-radius: 50%;"><p>Mark</p>
+                </div>
+                <div class="users">
+                    <img src="/public/img/blank-profile.png" alt="profile" class="profile-picture" style="height: 3rem; width: 3rem; margin: 1rem 1rem .5rem 0rem; border-radius: 50%;"><p>Emma</p>
+                </div>
+                <div class="users">
+                    <img src="/public/img/blank-profile.png" alt="profile" class="profile-picture" style="height: 3rem; width: 3rem; margin: 1rem 1rem .5rem 0rem; border-radius: 50%;"><p>John</p>
+                </div>
+                <form action="documentWrite()">
+                    <input class="chat-box" type="text" placeholder="Say Hi!">
+                    <input class="chat-button" type="button" value="Send">
+                </form>
+            </div>
+
+            <div class="timer">
+                <div class="button-group mode-buttons" id="js-mode-buttons">
+                  <button
+                    data-mode="pomodoro"
+                    class="button active mode-button"
+                    id="js-pomodoro"
+                  >
+                    Pomodoro
+                  </button>
+                  <button
+                    data-mode="shortBreak"
+                    class="button mode-button"
+                    id="js-short-break"
+                  >
+                    Short break
+                  </button>
+                  <button
+                    data-mode="longBreak"
+                    class="button mode-button"
+                    id="js-long-break"
+                  >
+                    Long break
+                  </button>
+                </div>
+                <div class="clock" id="js-clock">
+                  <span id="js-minutes">25</span>
+                  <span class="separator">:</span>
+                  <span id="js-seconds">00</span>
+                </div>
+                <button class="main-button" data-action="start" id="js-btn">
+                  Start
+                </button>
+              </div>
+        </div>
+    </main>
+    <script src="/script/main.js" type="text/javascript"></script>
+    <script src="/script/animation.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contents">
+                <p>Timely. Regain your focus!</p>
+                <p>For educational purposes only.</p>
+                <a href="#">View source code</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

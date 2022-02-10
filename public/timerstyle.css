@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --black: #161616;
+    --blue: hsl(223, 25%, 40%);
+    --darkblue: #1f2c4c;
+    --pomodoro: hsl(223, 25%, 40%);
+    --shortBreak: hsl(48, 23%, 40%);
+    --longBreak: hsl(105, 16%, 40%);
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #161616;
+    color: white;
+    font-family:'Poppins';
+}
+
+.app-name {
+    font-weight: 600;
+    font-size: 2rem;
+    padding: .5rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+li a:hover {
+    color: var(--blue);
+}
+
+#menu-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--black);
+    height: 45%;
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+    padding: 2rem 0rem 0rem 0rem;
+    transition: all 0.3s ease;
+}
+
+ul.active {
+    top: 10%;
+}
+
+.icon {
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.open-menu {
+    cursor: pointer;
+    position: absolute;
+    right: 3rem;
+    top: 1.5rem;
+    font-size: 2rem;
+}
+
+.close-menu {
+    cursor: pointer;
+    position: absolute;
+    right: 3rem;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.dashboard {
+    position:relative;
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 80vh;
+    width: 60vh;
+    padding: 2rem;
+    margin: 4rem 4rem 4rem 8rem;
+    border-radius: 10px;
+    font-family:'Poppins';
+}
+
+.dashboard-header {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.chat-box {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    border-radius: 10px;
+    padding: .5rem;
+    border: none;
+    width: 70%;
+    font-family: 'Poppins';
+}
+
+.chat-button {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: .5rem;
+    border: none;
+    border-radius: 10px;
+    width: 4rem;
+    cursor: pointer;
+    font-family: 'Poppins';
+}
+
+.chat-button:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+.users {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.timer {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .clock {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 10rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins";
+  }
+  
+  .mode-button {
+    font-size: 16px;
+    height: 28px;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: 300;
+    color: #fff;
+    border: 1px solid transparent;
+    margin: 0px;
+    border-radius: 4px;
+    padding: 1px 12px;
+    background: none;
+    font-family:'Poppins';
+  }
+  
+  .mode-button.active {
+    border-color: #fff;
+  }
+
+  .main-button {
+    cursor: pointer;
+    box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+    font-size: 22px;
+    height: 55px;
+    text-transform: uppercase;
+    color: hsl(175, 26%, 41%);
+    font-weight: bold;
+    width: 200px;
+    background-color: white;
+    border-width: initial;
+    border-style: none;
+    margin: 20px 0px 0px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    transition: color 0.5s ease-in-out 0s;
+  }
+  
+  button:focus, button:active {
+    outline: none;
+  }
+  
+  .main-button.active {
+    transform: translateY(6px);
+    box-shadow: none;
+    outline: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  footer {
+    background-color: #1e1e1e;
+    bottom: 0;
+    height: 10%;
+    font-family: 'Poppins';
+}
+
+.footer-contents {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0rem;
+    color: rgb(156, 156, 156);
+}
+
+.footer-contents a {
+    margin: 0rem 1rem;
+    color: rgb(156, 156, 156);
+    font-weight: 700;
+}
+
+.footer-contents p {
+    margin: 0rem 1rem;
+}
+
+.footer-contents a:hover {
+    color: var(--blue);
+}

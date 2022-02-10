@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timely - Regain your focus</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="icon" href="/public/img/clock.png" type="img">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<header>
+    <p class="app-name">Timely</p>
+    <nav>
+        <div class="main-menu">
+            <ul id="menu-list">
+                <div class="close-menu" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="pomodoro.html">Manage Apps</a>
+                </li>
+                <li>
+                    <a href="#">Invite Friends</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+            <div class="open-menu" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <p class="content-text">Timely is a redefined pomodoro app with built in functions that would help students to regain their focus!</p>
+        <div class="static-img">
+            <div class="container-1">
+                <img src="/public/img/clock.png" alt="clock">
+                <div class="container-name">
+                    <p class="name-cont">Classic Pomodoro</p>
+                </div>
+            </div>
+            <div class="container-2">
+                <img src="/public/img/lock.png" alt="lock" style="width: 10rem; height: 12rem; padding: 1rem; margin:3rem 0rem 0rem 5rem;">
+                <div class="container-name">
+                    <p class="name-cont">Lockdown Mode</p>
+                </div>
+            </div>
+            <div class="container-3">
+                <img src="/public/img/people.png" alt="people" style="margin: 1rem 0rem 0rem 0rem;">
+                <div class="container-name">
+                    <p class="name-cont">Focus with your Friends</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="vertical-center">
+            <button id="main-button">Get Started</button>
+        </div>
+    </main>
+    <script src="/script/main.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contents">
+                <p>Timely. Regain your focus!</p>
+                <p>For educational purposes only.</p>
+                <a href="#">View source code</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    function openMenu() {
+        document.getElementById('menu-list').style.cssText = 'display:block;';
+    }
+
+    function closeMenu() {
+        document.getElementById('menu-list').style.cssText = 'display:none';
+    }
+
+    document.getElementById('main-button').onclick = function () {
+        location.href = 'pomodoro.html';
+    }
+</script>
+
+</html>
