@@ -16,6 +16,8 @@ const timer = {
     if (action === 'start') {
       startTimer();
     } else {
+      let text = 'Are you sure you want to stop?'
+      alert(text)
       stopTimer();
     }
   });
@@ -113,9 +115,6 @@ const timer = {
       .forEach(e => e.classList.remove('active'));
     document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
     document.body.style.backgroundColor = `var(--${mode})`;
-    document
-      .getElementById('js-progress')
-      .setAttribute('max', timer.remainingTime.total);
   
     updateClock();
   }

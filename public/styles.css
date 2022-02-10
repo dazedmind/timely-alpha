@@ -29,6 +29,29 @@ header {
     padding: .5rem;
     margin: 1rem;
     cursor: pointer;
+    transition: .3s;
+}
+
+.app-name span:before {
+    content: '\00bb';
+    position: absolute;
+    left: -50px;
+    opacity: 1;
+}
+
+.app-name:hover span::after {
+    opacity: 1;
+    left: 50px;
+}
+.app-name span {
+    position: relative;
+    display: inline-block;
+}
+.app-name:hover {
+    color: var(--blue);
+    margin-left: 2rem;
+    transition: .3s;
+    right: -20px;
 }
 
 li {
@@ -47,7 +70,7 @@ li a:hover {
     top: 0;
     left: 0;
     background-color: var(--black);
-    height: 42%;
+    height: 43%;
     width: 100%;
     z-index: 5;
     text-align: center;
@@ -99,6 +122,26 @@ a {
     justify-content: center;
 }
 
+.container-1:hover {
+    transform: translateY(-2rem);
+    transition: 0.3s;
+    transition-delay: 10ms;
+    box-shadow: 0 1em 1em -.2em var(--black)
+}
+
+.container-2:hover {
+    transform: translate(0rem, -2rem);
+    transition: all .3s;
+    box-shadow: 0 1em 1em -.2em var(--black)
+}
+
+.container-3:hover {
+    transform: translate(0rem, -2rem);
+    transition: all .3s;
+    box-shadow: 0 1em 1em -.2em var(--black)
+
+}
+
 .container-1 {
     position: relative;
     background-color:#1f2c4c;
@@ -107,6 +150,7 @@ a {
     margin: 3rem 1.5rem;
     border-radius: 10px;
     cursor: pointer;
+    transition: .3s;
 }
 
 .container-2 {
@@ -117,6 +161,7 @@ a {
     margin: 3rem 1.5rem;
     border-radius: 10px;
     cursor: pointer;
+    transition: .3s;
 }
 
 .container-3 {
@@ -127,6 +172,7 @@ a {
     margin: 3rem 1.5rem;
     border-radius: 10px;
     cursor: pointer;
+    transition: .3s;
 }
 
 .container-name {
@@ -157,11 +203,14 @@ a {
     color: white;
     padding: 1rem 3.5rem;
     cursor: pointer;
+    transition: all .3s ease-out;
 }
 
 #main-button:hover {
     background-color: #fafafa;
     color: black;
+    transform: translateY(-.5rem);
+    transition: .3s;
 }
 
 .vertical-center {
